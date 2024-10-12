@@ -5,6 +5,7 @@ import com.olidev.pe.tp_integrador_final.model.dto.request.ClienteRequestDTO;
 import com.olidev.pe.tp_integrador_final.model.dto.response.ClienteResponseDTO;
 import com.olidev.pe.tp_integrador_final.service.abstraction.IClienteService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ClienteServiceImplementation implements IClienteService {
     private final ClienteRepository clienteRepository;
+    private final ModelMapper modelMapper;
 
     @Override
     public ClienteResponseDTO save(ClienteRequestDTO clienteRequestDTO) {

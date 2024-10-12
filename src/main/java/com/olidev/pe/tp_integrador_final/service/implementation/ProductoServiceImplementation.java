@@ -5,6 +5,7 @@ import com.olidev.pe.tp_integrador_final.model.dto.request.ProductoRequestDTO;
 import com.olidev.pe.tp_integrador_final.model.dto.response.ProductoResponseDTO;
 import com.olidev.pe.tp_integrador_final.service.abstraction.IProductoService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductoServiceImplementation implements IProductoService {
     private final ProductoRepository productoRepository;
+    private final ModelMapper modelMapper;
 
     @Override
     public ProductoResponseDTO save(ProductoRequestDTO productoRequestDTO) {

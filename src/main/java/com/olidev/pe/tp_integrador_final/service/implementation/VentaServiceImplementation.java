@@ -5,6 +5,7 @@ import com.olidev.pe.tp_integrador_final.model.dto.request.VentaRequestDTO;
 import com.olidev.pe.tp_integrador_final.model.dto.response.VentaResponseDTO;
 import com.olidev.pe.tp_integrador_final.service.abstraction.IVentaService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class VentaServiceImplementation implements IVentaService {
     private final VentasRepository ventasRepository;
+    private final ModelMapper modelMapper;
 
     @Override
     public VentaResponseDTO save(VentaRequestDTO ventaRequestDTO) {
